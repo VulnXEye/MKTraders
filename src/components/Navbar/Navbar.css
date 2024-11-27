@@ -1,0 +1,27 @@
+.navbar {
+  padding: 20px 0px;
+  margin-left: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 150px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  color: #49557e;
+}
+
+.navbar .active {
+  padding: 2px;
+  border-bottom: 2px solid #49557e;
+}
+
+.navbar li {
+  cursor: pointer;
+}
