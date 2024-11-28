@@ -1,0 +1,42 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - master  # Deploy on push to master branch
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Step 4: Build React app
+      - name: Build React app
+        run: npm run build
+
+      # Step 5: Deploy to web directory on EC2
+      - name: Deploy to EC2 instance
+        run: |
+          # Define variables
+          APP_DIR=/var/www/react-app
+          BUILD_DIR=build
+
+          # Ensure the directory exists on the instance
+          ssh -o StrictHostKeyChecking=no ec2-user@172.31.14.208 "mkdir -p $APP_DIR"
+
+          # Copy build files to the EC2 instance
+          scp -o StrictHostKeyChecking=no -r $BUILD_DIR/* ec2-user@172.31.14.208:$APP_DIR
+
