@@ -1,55 +1,94 @@
 .header {
-  margin: auto;
-  height: 87vh;
-  width: 99vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffdf00;
-  background-image: '/banner.png';
-}
-.header button {
-  background: transparent;
-  margin-top: 20px;
-  font-size: 16px;
-  color: #49557e;
-  border: 1px solid tomato;
-  padding: 10px 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.header button:hover {
-  background: #fff4f2;
+  height: 86vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  padding: 0 50px; /* Add padding for content spacing */
+  background-color: #ffdf00; /* Background color */
+  box-sizing: border-box;
 }
 
 .header-contents {
-  margin-left: 100px;
-  max-width: 60%;
+  flex: 1;
+  max-width: 50%; /* Take up 50% of the width */
   text-align: left;
   animation: fadeIn 2s;
 }
 
-.header h1 {
-  font-size: 5rem;
+.header-contents h1 {
+  font-size: 4rem;
   margin: 0;
+  color: #2c2c2c;
+  line-height: 1.2;
 }
 
-.header p {
-  width: 700px;
-  font-size: 1.5rem;
+.header-contents p {
   margin-top: 20px;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.header button {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: tomato;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.header button:hover {
+  background-color: #ff8264;
 }
 
 .header_images {
+  flex: 1;
+  max-width: 50%; /* Take up 50% of the width */
   display: flex;
-  justify-content: flex-end;
-  animation: fadeIn 2s;
+  justify-content: center;
+  align-items: center;
 }
 
 .header img {
-  max-height: 100%; /* Reduce the height to 50% of the header */
-  width: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image fills its container */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for better aesthetics */
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .header-contents {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .header_images {
+    max-width: 100%;
+  }
+
+  .header img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .header-contents h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-contents p {
+    font-size: 1rem;
+  }
 }

@@ -1,0 +1,29 @@
+.product-detail {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.product-detail-image-container {
+  flex: 1;
+}
+
+.product-detail-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-detail-info {
+  flex: 2;
+}
+
+.product-detail-info h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.product-detail-info p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}

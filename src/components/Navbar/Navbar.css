@@ -1,6 +1,5 @@
 .navbar {
   padding: 20px 0px;
-  margin-left: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,8 +9,13 @@
   width: 150px;
 }
 
+.LOGO {
+  margin-left: 200px;
+}
+
 .navbar-menu {
   display: flex;
+  margin-right: 30px;
   list-style: none;
   gap: 20px;
   color: #49557e;
