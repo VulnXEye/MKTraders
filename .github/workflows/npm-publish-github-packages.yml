@@ -1,42 +1,55 @@
-name: Deploy React App
+name: Deploy React App to EC2
 
 on:
   push:
     branches:
-      - master  # Deploy on push to master branch
+      - main
 
 jobs:
-  build-and-deploy:
-    runs-on: self-hosted
+  deploy:
+    runs-on: ubuntu-latest
+
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
+      # Check out the repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js
+      # Set up Node.js to build the React app
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm ci
-
-      # Step 4: Build React app
-      - name: Build React app
-        run: npm run build
-
-      # Step 5: Deploy to web directory on EC2
-      - name: Deploy to EC2 instance
+      # Install dependencies and build the React app
+      - name: Install Dependencies and Build
         run: |
-          # Define variables
-          APP_DIR=/var/www/react-app
-          BUILD_DIR=build
+          npm install
+          npm run build
 
-          # Ensure the directory exists on the instance
-          ssh -o StrictHostKeyChecking=no ec2-user@172.31.14.208 "mkdir -p $APP_DIR"
+      # Configure SSH key for deployment
+      - name: Configure SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
+      # Copy build files to the EC2 instance
+      - name: Deploy to EC2
+        env:
+          EC2_USER: ${{ secrets.EC2_USER }}
+          EC2_IP: ${{ secrets.EC2_IP }}
+          APP_DIR: ${{ secrets.APP_DIR }}
+        run: |
+          # Ensure the app directory exists on the EC2 instance
+          ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP "mkdir -p $APP_DIR"
+          
           # Copy build files to the EC2 instance
-          scp -o StrictHostKeyChecking=no -r $BUILD_DIR/* ec2-user@172.31.14.208:$APP_DIR
+          scp -o StrictHostKeyChecking=no -r build/* $EC2_USER@$EC2_IP:$APP_DIR
 
+      # Restart Nginx or any other server if needed
+      - name: Restart Server (Optional)
+        env:
+          EC2_USER: ${{ secrets.EC2_USER }}
+          EC2_IP: ${{ secrets.EC2_IP }}
+        run: |
+          ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_IP "sudo systemctl restart nginx"
