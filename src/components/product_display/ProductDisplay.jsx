@@ -17,7 +17,7 @@ const ProductDisplay = ({ category }) => {
                   key={index}
                   id={item._id}
                   name={item.name}
-                  description={item.description}
+                  description={item.short_description}
                   image={item.image}
                 />
               )

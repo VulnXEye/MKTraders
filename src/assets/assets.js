@@ -86,111 +86,109 @@ export const assets = {
 
 export const menu_list = [
   {
-    menu_name: 'Salad',
+    menu_name: 'Paint Roller',
     menu_image: menu_1,
   },
   {
-    menu_name: 'Rolls',
+    menu_name: 'Epoxy Application Tools',
     menu_image: menu_2,
   },
   {
-    menu_name: 'Deserts',
+    menu_name: 'Putty Knife',
     menu_image: menu_3,
   },
   {
-    menu_name: 'Sandwich',
+    menu_name: 'PVC Handle Scrapper',
     menu_image: menu_4,
   },
   {
-    menu_name: 'Cake',
+    menu_name: 'Paint Allied Products',
     menu_image: menu_5,
   },
   {
-    menu_name: 'Pure Veg',
+    menu_name: 'Paint Brushes',
     menu_image: menu_6,
   },
   {
-    menu_name: 'Pasta',
+    menu_name: 'Decorative Roller',
     menu_image: menu_7,
-  },
-  {
-    menu_name: 'Noodles',
-    menu_image: menu_8,
   },
 ]
 
 export const food_list = [
   {
     _id: '1',
-    name: 'Greek salad',
+    name: 'Yellow Line Paint Roller',
     image: food_1,
     price: 12,
-    description:
-      'Food provides essential nutrients for overall health and well-being',
-    category: 'Salad',
+    short_description:
+      'High-quality Yellow Line Paint Roller for smooth, professional finishes on walls, ceilings, and more.',
+    main_description:
+      "The Yellow Line Paint Roller is the perfect painting tool for achieving professional, streak-free results. Crafted with high-density, durable fabric, this roller ensures even paint application with minimal drips, making it ideal for both beginners and experienced painters. The ergonomic, non-slip handle offers a comfortable grip, allowing you to tackle large surfaces like walls, ceilings, and furniture without strain. Measuring 9 inches in width, it provides excellent coverage while maintaining precision. Compatible with both water-based and oil-based paints, this roller is versatile and reusable, ensuring long-term value. Whether you're refreshing a room or working on a DIY home improvement project, the Yellow Line Paint Roller delivers smooth, efficient, and flawless results every time. Perfect for use in residential, commercial, or creative painting projects, this roller is an essential tool for all your painting needs.",
+    category: 'Paint Roller',
   },
   {
     _id: '2',
-    name: 'Veg salad',
+    name: 'tiger strips',
     image: food_2,
     price: 18,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Salad',
+    category: 'Paint Roller',
   },
   {
     _id: '3',
-    name: 'Clover Salad',
+    name: 'Blue Line',
     image: food_3,
     price: 16,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Salad',
+    category: 'Paint Roller',
   },
   {
     _id: '4',
-    name: 'Chicken Salad',
+    name: 'Green Thread',
     image: food_4,
     price: 24,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Salad',
+    category: 'Paint Roller',
   },
   {
     _id: '5',
-    name: 'Lasagna Rolls',
+    name: 'Lasagna Epoxy Application Tools',
     image: food_5,
     price: 14,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Rolls',
+    category: 'Epoxy Application Tools',
   },
   {
     _id: '6',
-    name: 'Peri Peri Rolls',
+    name: 'Peri Peri Epoxy Application Tools',
     image: food_6,
     price: 12,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Rolls',
+    category: 'Epoxy Application Tools',
   },
   {
     _id: '7',
-    name: 'Chicken Rolls',
+    name: 'Chicken Epoxy Application Tools',
     image: food_7,
     price: 20,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Rolls',
+    category: 'Epoxy Application Tools',
   },
   {
     _id: '8',
-    name: 'Veg Rolls',
+    name: 'Veg Epoxy Application Tools',
     image: food_8,
     price: 15,
     description:
       'Food provides essential nutrients for overall health and well-being',
-    category: 'Rolls',
+    category: 'Epoxy Application Tools',
   },
   {
     _id: '9',

@@ -25,7 +25,8 @@ const ProductDetail = () => {
       </div>
       <div className="product-detail-info">
         <h1>{product.name}</h1>
-        <p>{product.description}</p>
+        <h4>{product.short_description}</h4>
+        <p>{product.main_description}</p>
       </div>
     </div>
   )
