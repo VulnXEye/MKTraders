@@ -4,15 +4,23 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # Allows manual triggering of the workflow
+    inputs:  # Define inputs for manual runs
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "main"
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       # Check out the repository
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch || github.ref_name }} # Use the selected branch or the push branch
 
       # Set up Node.js to build the React app
       - name: Set up Node.js
