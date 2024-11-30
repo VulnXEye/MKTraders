@@ -1,29 +1,29 @@
 .explore-products {
   display: flex;
-  margin: 0 5%;
+  margin-left: 50px;
+  margin-right: 50px;
   flex-direction: column;
   gap: 20px;
 }
 
 .explore-products h1 {
   color: #262626;
-  margin: 20px 0;
+  margin: 20px 0px;
   font-weight: 500;
 }
 
 .explore-products text {
-  max-width: 90%;
+  max-width: 60%;
   color: #808080;
 }
 
 .explore-product-list {
   display: flex;
-  flex-wrap: wrap; /* Adjust layout on smaller screens */
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 0px;
 }
 
 .explore-product-list::-webkit-scrollbar {
@@ -31,7 +31,7 @@
 }
 
 .explore-product-list-item img {
-  width: 15vw;
+  width: 80vw;
   max-width: 80px;
   cursor: pointer;
   border-radius: 50%;
@@ -41,18 +41,18 @@
 .explore-product-list-item p {
   margin-top: 10px;
   color: #747474;
-  font-size: clamp(14px, 1.4vw, 16px); /* Responsive font size */
+  font-size: (1.4vw, 16px);
   cursor: pointer;
 }
 
 .explore-product hr {
-  margin: 10px 0;
+  margin: 10px 0px;
   height: 2px;
-  background-color: #e2e2e2;
+  background-color: e2e2e2;
   border: none;
 }
 
-.explore-product-list-item:active {
+.explore-product-list-item :active {
   border: 4px solid tomato;
   padding: 2px;
 }
@@ -63,56 +63,10 @@
 
 .explore-product-list-item.active {
   margin: 5px;
-  border: 3px solid #007bff;
+  border: 3px solid #007bff; /* Highlight active item */
   border-radius: 8px;
 }
 
 .explore-product-list-item img.highlighted {
   filter: brightness(1.2);
-}
-
-/* Media Queries for responsiveness */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-  .explore-products {
-    margin: 0 20px;
-  }
-
-  .explore-products text {
-    max-width: 100%;
-  }
-
-  .explore-product-list {
-    gap: 15px;
-  }
-
-  .explore-product-list-item img {
-    width: 25vw;
-    max-width: 60px;
-  }
-
-  .explore-product-list-item p {
-    font-size: 14px;
-  }
-}
-
-/* For mobile screens */
-@media (max-width: 480px) {
-  .explore-products {
-    margin: 0 10px;
-  }
-
-  .explore-product-list {
-    flex-direction: column;
-  }
-
-  .explore-product-list-item img {
-    width: 40vw;
-    max-width: 50px;
-  }
-
-  .explore-product-list-item p {
-    font-size: 12px;
-  }
 }

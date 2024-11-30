@@ -1,8 +1,7 @@
 .product-detail {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap for smaller screens */
   gap: 30px;
-  padding: 20px; /* Adjust padding for smaller screens */
+  padding: 40px;
   align-items: flex-start;
   background-color: #f9f9f9;
   color: #333;
@@ -28,20 +27,20 @@
 
 .product-detail-info h1 {
   margin-bottom: 15px;
-  font-size: clamp(2rem, 4vw, 2.5rem); /* Responsive font size */
+  font-size: 2.5rem;
   color: #2c3e50;
   font-weight: bold;
 }
 
 .product-detail-info h4 {
   margin-bottom: 15px;
-  font-size: clamp(1.2rem, 3vw, 1.5rem); /* Responsive font size */
+  font-size: 1.5rem;
   color: #555;
   font-style: italic;
 }
 
 .product-detail-info p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -51,7 +50,7 @@
 }
 
 .product-specifications h3 {
-  font-size: clamp(1.5rem, 3vw, 1.8rem); /* Responsive font size */
+  font-size: 1.8rem;
   color: #1abc9c;
   margin-bottom: 10px;
 }
@@ -63,7 +62,7 @@
 
 .product-specifications li {
   margin-bottom: 10px;
-  font-size: clamp(1rem, 2vw, 1.1rem); /* Responsive font size */
+  font-size: 1.1rem;
   color: #34495e;
 }
 
@@ -72,7 +71,7 @@
 }
 
 .product-benefits h3 {
-  font-size: clamp(1.5rem, 3vw, 1.8rem); /* Responsive font size */
+  font-size: 1.8rem;
   color: #e67e22;
   margin-bottom: 10px;
 }
@@ -84,59 +83,6 @@
 
 .product-benefits li {
   margin-bottom: 10px;
-  font-size: clamp(1rem, 2vw, 1.1rem); /* Responsive font size */
+  font-size: 1.1rem;
   color: #7f8c8d;
-}
-
-/* Media Queries */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-  .product-detail {
-    flex-direction: column; /* Stack items vertically */
-    padding: 15px;
-  }
-
-  .product-detail-image-container {
-    flex: none; /* Ensure image container takes full width */
-    width: 100%;
-  }
-
-  .product-detail-info {
-    flex: none; /* Ensure info section takes full width */
-    width: 100%;
-  }
-}
-
-/* For mobile screens */
-@media (max-width: 480px) {
-  .product-detail {
-    padding: 10px; /* Reduce padding for small screens */
-  }
-
-  .product-detail-image-container {
-    margin-bottom: 20px; /* Add spacing between image and content */
-  }
-
-  .product-detail-info h1 {
-    font-size: clamp(1.8rem, 4vw, 2rem); /* Smaller heading size */
-  }
-
-  .product-detail-info h4 {
-    font-size: clamp(1rem, 3vw, 1.2rem); /* Smaller subheading size */
-  }
-
-  .product-detail-info p {
-    font-size: clamp(0.9rem, 2.5vw, 1rem); /* Adjust paragraph font size */
-  }
-
-  .product-specifications h3,
-  .product-benefits h3 {
-    font-size: clamp(1.3rem, 3vw, 1.5rem); /* Adjust heading size */
-  }
-
-  .product-specifications li,
-  .product-benefits li {
-    font-size: clamp(0.9rem, 2vw, 1rem); /* Adjust list item font size */
-  }
 }
