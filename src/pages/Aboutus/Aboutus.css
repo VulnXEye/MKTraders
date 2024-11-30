@@ -13,7 +13,7 @@
 
 .about-us-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Default to column for smaller screens */
   align-items: center;
   gap: 20px;
 }
@@ -43,10 +43,50 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 768px) {
+/* Responsive Adjustments */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .about-us {
+    margin-left: 20px; /* Adjust left margin for smaller screens */
+  }
+
   .about-us-content {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 40px;
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px;
+  }
+
+  .about-us-text {
+    font-size: 0.9rem; /* Slightly smaller text for mobile */
+    max-width: 100%; /* Take full width */
+    text-align: left;
+  }
+
+  .about-us-img {
+    width: 100%; /* Ensure image fits the screen */
+  }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+  .about-us {
+    padding: 15px; /* Reduce padding for mobile */
+    margin-left: 10px; /* Adjust left margin for better fit */
+  }
+
+  .about-us h1 {
+    font-size: 2rem; /* Smaller font size for small screens */
+  }
+
+  .about-us-text {
+    font-size: 0.85rem; /* Further reduced font size for readability */
+  }
+
+  .about-us-content {
+    gap: 15px; /* Reduce the gap between content */
+  }
+
+  .about-us-img {
+    width: 100%; /* Ensure the image fully fits on mobile screens */
   }
 }
