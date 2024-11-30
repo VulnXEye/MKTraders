@@ -1,17 +1,24 @@
 .product-detail {
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Arial', sans-serif;
 }
 
 .product-detail-image-container {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-detail-image {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
 }
 
 .product-detail-info {
@@ -19,11 +26,63 @@
 }
 
 .product-detail-info h1 {
-  margin-bottom: 10px;
-  font-size: 2rem;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.product-detail-info h4 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #555;
+  font-style: italic;
 }
 
 .product-detail-info p {
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-specifications {
+  margin-top: 20px;
+}
+
+.product-specifications h3 {
+  font-size: 1.8rem;
+  color: #1abc9c;
+  margin-bottom: 10px;
+}
+
+.product-specifications ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-specifications li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.product-benefits {
+  margin-top: 20px;
+}
+
+.product-benefits h3 {
+  font-size: 1.8rem;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.product-benefits ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.product-benefits li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #7f8c8d;
 }
