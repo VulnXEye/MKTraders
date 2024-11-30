@@ -1,8 +1,9 @@
 .about-us {
   padding: 20px;
-  margin-left: 50px;
+  margin: 0 auto; /* Center the content */
   text-align: center;
   font-family: Arial, sans-serif;
+  max-width: 1200px; /* Set a maximum width for large screens */
 }
 
 .about-us h1 {
@@ -13,7 +14,7 @@
 
 .about-us-content {
   display: flex;
-  flex-direction: column; /* Default to column for smaller screens */
+  flex-direction: column; /* Default to column on small screens */
   align-items: center;
   gap: 20px;
 }
@@ -34,6 +35,8 @@
 
 .about-us-image {
   flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image container */
 }
 
 .about-us-img {
@@ -45,48 +48,73 @@
 
 /* Responsive Adjustments */
 
-/* For tablets */
-@media (max-width: 768px) {
+/* For medium screens like tablets and small laptops */
+@media (max-width: 1024px) {
   .about-us {
-    margin-left: 20px; /* Adjust left margin for smaller screens */
+    padding: 20px;
   }
 
   .about-us-content {
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column; /* Stack content vertically for tablets */
     gap: 20px;
   }
 
   .about-us-text {
-    font-size: 0.9rem; /* Slightly smaller text for mobile */
-    max-width: 100%; /* Take full width */
+    font-size: 1rem;
+    max-width: 100%; /* Allow text container to use full width */
     text-align: left;
   }
 
   .about-us-img {
-    width: 100%; /* Ensure image fits the screen */
+    width: 100%; /* Ensure image fits well on medium screens */
   }
 }
 
-/* For very small screens (phones) */
-@media (max-width: 480px) {
+/* For small screens (mobile) */
+@media (max-width: 768px) {
   .about-us {
-    padding: 15px; /* Reduce padding for mobile */
-    margin-left: 10px; /* Adjust left margin for better fit */
+    padding: 15px;
   }
 
   .about-us h1 {
-    font-size: 2rem; /* Smaller font size for small screens */
+    font-size: 2rem; /* Smaller heading for mobile */
   }
 
   .about-us-text {
-    font-size: 0.85rem; /* Further reduced font size for readability */
+    font-size: 0.9rem;
+    max-width: 100%;
+    text-align: left;
   }
 
   .about-us-content {
-    gap: 15px; /* Reduce the gap between content */
+    gap: 15px;
   }
 
   .about-us-img {
-    width: 100%; /* Ensure the image fully fits on mobile screens */
+    width: 100%;
+  }
+}
+
+/* Large screens (PCs and laptops) */
+@media (min-width: 1025px) {
+  .about-us {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the content */
+  }
+
+  .about-us-content {
+    flex-direction: row; /* Arrange content side by side */
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .about-us-text {
+    font-size: 1.125rem; /* Slightly larger text for better readability */
+    max-width: 60%; /* Allow text to take more space on larger screens */
+    text-align: left;
+  }
+
+  .about-us-img {
+    width: 40%; /* Image takes 40% of the width */
   }
 }
