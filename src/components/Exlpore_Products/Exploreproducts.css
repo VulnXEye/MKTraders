@@ -10,15 +10,18 @@
   color: #262626;
   margin: 20px 0px;
   font-weight: 500;
+  font-size: max(2.5vw, 24px); /* Responsive font size */
 }
 
 .explore-products text {
   max-width: 60%;
   color: #808080;
+  font-size: max(1.5vw, 14px); /* Responsive font size */
 }
 
 .explore-product-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   justify-content: space-between;
   align-items: center;
   gap: 30px;
@@ -41,14 +44,14 @@
 .explore-product-list-item p {
   margin-top: 10px;
   color: #747474;
-  font-size: (1.4vw, 16px);
+  font-size: max(1.4vw, 16px); /* Responsive font size */
   cursor: pointer;
 }
 
 .explore-product hr {
   margin: 10px 0px;
   height: 2px;
-  background-color: e2e2e2;
+  background-color: #e2e2e2;
   border: none;
 }
 
@@ -69,4 +72,30 @@
 
 .explore-product-list-item img.highlighted {
   filter: brightness(1.2);
+}
+
+/* Media Queries for Responsive Text */
+
+@media (max-width: 768px) {
+  .explore-products h1 {
+    font-size: max(5vw, 20px); /* Smaller font size for smaller screens */
+  }
+
+  .explore-products text {
+    max-width: 100%; /* Allow text to take full width */
+    font-size: max(3vw, 14px); /* Smaller font size for text */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-products h1 {
+    font-size: max(
+      6vw,
+      18px
+    ); /* Even smaller font size for very small screens */
+  }
+
+  .explore-products text {
+    font-size: max(4vw, 12px); /* Further reduce text size */
+  }
 }

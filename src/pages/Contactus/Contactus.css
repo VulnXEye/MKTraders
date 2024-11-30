@@ -63,3 +63,19 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+/* For small screens (mobile and tablet) */
+@media (max-width: 768px) {
+  .contact-us {
+    flex-direction: column; /* Stack the elements vertically on smaller screens */
+    gap: 20px; /* Reduce the gap between elements */
+  }
+
+  .contact-details {
+    max-width: 100%; /* Make contact details take full width on smaller screens */
+  }
+
+  .enquiry-form {
+    max-width: 100%; /* Make the form take full width on smaller screens */
+  }
+}

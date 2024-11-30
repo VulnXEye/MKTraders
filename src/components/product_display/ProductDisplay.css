@@ -16,3 +16,66 @@
   gap: 30px;
   row-gap: 50px;
 }
+
+/* For small screens (mobile) */
+@media (max-width: 768px) {
+  .product-display {
+    margin-left: 20px;
+    margin-right: 20px; /* Reduce margins on mobile for better fit */
+  }
+
+  .Product-display-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(160px, 1fr)
+    ); /* More compact grid on mobile */
+    gap: 20px; /* Smaller gap between items on mobile */
+  }
+
+  .product-display h2 {
+    font-size: 1.8rem; /* Smaller heading on mobile */
+    text-align: center; /* Center the heading */
+  }
+}
+
+/* For medium screens (tablets and small laptops) */
+@media (max-width: 1024px) {
+  .product-display {
+    margin-left: 50px;
+    margin-right: 50px; /* Moderate margins on tablets */
+  }
+
+  .Product-display-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Slightly larger grid items */
+    gap: 25px; /* Moderate gap between items */
+  }
+
+  .product-display h2 {
+    font-size: 2rem; /* Moderate font size */
+    text-align: center; /* Center the heading */
+  }
+}
+
+/* For large screens (laptops and desktops) */
+@media (min-width: 1025px) {
+  .product-display {
+    margin-left: 100px;
+    margin-right: 70px; /* Original margin on larger screens */
+  }
+
+  .Product-display-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(240px, 1fr)
+    ); /* Original grid layout */
+    gap: 30px; /* Original gap between items */
+  }
+
+  .product-display h2 {
+    font-size: max(2vw, 24px); /* Original font size */
+    text-align: left; /* Align heading to the left */
+  }
+}

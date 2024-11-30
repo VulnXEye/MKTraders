@@ -29,3 +29,63 @@
 .navbar li {
   cursor: pointer;
 }
+
+/* For small screens (mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar items vertically */
+    padding: 15px;
+  }
+
+  .navbar .logo {
+    width: 120px; /* Reduce the logo size for smaller screens */
+  }
+
+  .navbar-menu {
+    display: flex;
+    flex-direction: column; /* Stack the menu items vertically */
+    margin-right: 0;
+    gap: 15px; /* Adjust gap between items */
+    align-items: center; /* Center the items */
+  }
+
+  .LOGO {
+    margin-left: 0; /* Remove large left margin */
+    margin-bottom: 10px; /* Add some space below the logo */
+  }
+}
+
+/* For medium screens (tablets and small laptops) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar .logo {
+    width: 130px; /* Slightly reduce logo size */
+  }
+
+  .navbar-menu {
+    gap: 15px; /* Adjust the gap for medium-sized screens */
+    margin-right: 20px;
+  }
+}
+
+/* For large screens (laptops and desktops) */
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 20px 0px; /* Ensure large padding on bigger screens */
+  }
+
+  .navbar .logo {
+    width: 150px; /* Maintain the logo size on large screens */
+  }
+
+  .navbar-menu {
+    gap: 20px; /* Keep the default gap on large screens */
+  }
+
+  .LOGO {
+    margin-left: 200px; /* Maintain original margin for larger screens */
+  }
+}
