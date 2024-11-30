@@ -1,5 +1,6 @@
 .contact-us {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   justify-content: space-between;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -13,11 +14,12 @@
 
 .contact-details h2 {
   margin-bottom: 20px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Responsive heading size */
 }
 
 .contact-details p {
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive paragraph size */
 }
 
 .enquiry-form {
@@ -26,6 +28,7 @@
 
 .enquiry-form h2 {
   margin-bottom: 20px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem); /* Responsive heading size */
 }
 
 .form-group {
@@ -62,4 +65,47 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+
+/* For tablets */
+@media (max-width: 768px) {
+  .contact-us {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .contact-details {
+    max-width: 100%; /* Full width */
+  }
+
+  .enquiry-form {
+    max-width: 100%; /* Full width */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 15px; /* Reduce padding for compact layout */
+  }
+
+  .contact-details h2,
+  .enquiry-form h2 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Adjust heading size */
+  }
+
+  .contact-details p {
+    font-size: clamp(0.8rem, 3vw, 0.9rem); /* Smaller paragraph size */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Smaller padding for inputs */
+  }
+
+  button {
+    padding: 8px 16px; /* Compact button size */
+  }
 }

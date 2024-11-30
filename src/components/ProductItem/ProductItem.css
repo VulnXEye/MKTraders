@@ -1,6 +1,6 @@
 .Product_Item {
   cursor: pointer;
-  width: 100%;
+  width: calc(100% - 30px); /* Account for margins dynamically */
   margin: 15px; /* Space between items */
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow with more vertical depth */
@@ -38,11 +38,55 @@
   font-size: 14px; /* Slightly larger font for better readability */
   line-height: 1.5; /* Increased line height for spacing */
   margin-bottom: 15px; /* Space below the description */
-  overflow: hidden;
 }
 
 /* Hover effects */
 .Product_Item:hover {
   transform: translateY(-5px); /* Slight lift on hover */
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for hover effect */
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .Product_Item {
+    width: calc(50% - 20px); /* Two items per row with gap */
+  }
+
+  .product-item-image {
+    height: 180px; /* Adjusted height for smaller screens */
+  }
+
+  .product-item-name-rating p {
+    font-size: 16px; /* Slightly smaller font for readability */
+  }
+
+  .product-item-desc {
+    font-size: 13px; /* Adjust description size */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .Product_Item {
+    width: calc(100% - 20px); /* Full width with small margin */
+    margin: 10px; /* Reduce margin for better fit */
+  }
+
+  .product-item-image {
+    height: 150px; /* Smaller image height for mobile */
+  }
+
+  .product-item-info {
+    padding: 15px; /* Reduce padding for compact layout */
+  }
+
+  .product-item-name-rating p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .product-item-desc {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
 }

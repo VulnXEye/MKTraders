@@ -1,18 +1,59 @@
 .product-display {
   margin-top: 30px;
-  margin-left: 100px;
-  margin-right: 70px;
+  margin-left: 5%; /* Use percentage for better responsiveness */
+  margin-right: 5%;
 }
 
 .product-display h2 {
-  font-size: max(2vw, 24px);
+  font-size: clamp(20px, 2vw, 24px); /* Responsive font size */
   font-weight: 600;
 }
 
 .Product-display-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(240px, 1fr)
+  ); /* Adaptive grid */
   margin-top: 30px;
   gap: 30px;
   row-gap: 50px;
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .product-display {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .Product-display-list {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Smaller minimum size */
+    gap: 20px; /* Reduce spacing */
+    row-gap: 30px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .product-display {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .product-display h2 {
+    font-size: clamp(18px, 4vw, 20px); /* Scale down heading */
+    text-align: center; /* Center-align heading */
+  }
+
+  .Product-display-list {
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 15px; /* Reduce gaps */
+    row-gap: 20px;
+  }
 }

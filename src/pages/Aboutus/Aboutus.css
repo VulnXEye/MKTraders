@@ -1,13 +1,13 @@
 .about-us {
   padding: 20px;
-  margin-left: 50px;
+  margin: 0 auto; /* Center align the section */
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .about-us h1 {
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
   color: #333;
 }
 
@@ -22,7 +22,7 @@
   flex: 1;
   max-width: 600px;
   text-align: left;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive text size */
   color: #555;
   line-height: 1.6;
 }
@@ -43,10 +43,32 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive Adjustments */
+
+/* Larger screens (tablets and above) */
 @media (min-width: 768px) {
   .about-us-content {
-    flex-direction: row;
+    flex-direction: row; /* Align text and image side-by-side */
     align-items: flex-start;
     gap: 40px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .about-us {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .about-us h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem); /* Smaller heading */
+  }
+
+  .about-us-text {
+    font-size: clamp(0.8rem, 4vw, 0.9rem); /* Compact font size */
+  }
+
+  .about-us-content {
+    gap: 15px; /* Reduce gap between text and image */
   }
 }

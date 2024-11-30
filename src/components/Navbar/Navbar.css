@@ -1,8 +1,9 @@
 .navbar {
-  padding: 20px 0px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .navbar .logo {
@@ -21,11 +22,55 @@
   color: #49557e;
 }
 
+.navbar-menu li {
+  cursor: pointer;
+}
+
 .navbar .active {
   padding: 2px;
   border-bottom: 2px solid #49557e;
 }
 
-.navbar li {
-  cursor: pointer;
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .LOGO {
+    margin-left: 0; /* Center align for smaller screens */
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Stack menu items */
+    align-items: flex-start;
+    margin: 10px 0 0;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    text-align: left; /* Align text left */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .navbar .logo {
+    width: 120px; /* Smaller logo size for mobiles */
+  }
+
+  .navbar-menu {
+    gap: 10px;
+    margin-right: 0; /* Adjust right margin */
+  }
+
+  .navbar-menu li {
+    font-size: 14px; /* Reduce font size for better fit */
+  }
 }
