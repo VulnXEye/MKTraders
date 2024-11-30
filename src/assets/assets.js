@@ -628,45 +628,6 @@ export const food_list = [
     ],
   },
   {
-    _id: '14',
-    name: 'Painting Comb',
-    image: food_14,
-    short_description:
-      'Efficient 3-inch stainless steel comb for creating textured paint finishes and patterns.',
-    main_description:
-      "The 3 Inch Stainless Steel Painting Comb is an essential tool for creating textured finishes and patterns in your painting projects. Made with durable stainless steel, this comb allows you to easily create intricate textures, waves, and designs in paint, perfect for both DIY projects and professional use. Its 3-inch width is ideal for detailed work, and its ergonomic design ensures a comfortable grip during use. Whether you're working on walls, furniture, or crafts, this comb adds a creative touch to your painting tasks.",
-    category: 'Paint Allied Products',
-    specifications: [
-      {
-        title: 'Material',
-        value: 'Durable stainless steel for long-lasting use',
-      },
-      {
-        title: 'Size',
-        value: '3-inch width for precise, detailed texturing',
-      },
-      {
-        title: 'Design',
-        value: 'Ergonomic handle for comfortable grip and control',
-      },
-      {
-        title: 'Application',
-        value: 'Perfect for creating textured effects and patterns in paint',
-      },
-      {
-        title: 'Maintenance',
-        value: 'Easy to clean after use for multiple projects',
-      },
-    ],
-    benefits: [
-      'Creates intricate textures and patterns for unique paint finishes.',
-      'Made from durable stainless steel for long-term durability.',
-      'Ergonomically designed for a comfortable grip during use.',
-      'Ideal for a variety of projects, including walls, furniture, and crafts.',
-      'Easy to clean and reuse for multiple painting applications.',
-    ],
-  },
-  {
     _id: '15',
     name: 'Roller Extensions',
     image: food_15,
