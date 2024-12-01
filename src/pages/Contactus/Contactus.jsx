@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from 'emailjs-com'
 import './Contactus.css'
 
@@ -11,6 +10,11 @@ const Contactus = () => {
     context: '',
   })
 
+  useEffect(() => {
+    // Initialize EmailJS with your public key (user ID)
+    emailjs.init('GXxUEm0NDa7Wg1X8u') // Use your actual public key here
+  }, [])
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm({ ...form, [name]: value })
@@ -21,15 +25,15 @@ const Contactus = () => {
 
     emailjs
       .send(
-        'service_ciopgap', // Replace with your EmailJS service ID
-        'template_fjph76l', // Replace with your EmailJS template ID
+        'service_ciopgap', // Your service ID
+        'template_fjph76l', // Your template ID
         {
           from_name: form.name,
           from_email: form.email,
           phone: form.phone,
           message: form.context,
         },
-        'rohitblade0105@gmail.com' // Replace with your EmailJS user ID
+        'GXxUEm0NDa7Wg1X8u' // Your user ID (public key)
       )
       .then(
         (result) => {
@@ -41,6 +45,7 @@ const Contactus = () => {
         }
       )
   }
+
   return (
     <div className="contact-us">
       <div className="contact-details">
