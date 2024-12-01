@@ -21,15 +21,15 @@ const Contactus = () => {
 
     emailjs
       .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_ciopgap', // Replace with your EmailJS service ID
+        'template_fjph76l', // Replace with your EmailJS template ID
         {
           from_name: form.name,
           from_email: form.email,
           phone: form.phone,
           message: form.context,
         },
-        'YOUR_USER_ID' // Replace with your EmailJS user ID
+        'rohitblade0105@gmail.com' // Replace with your EmailJS user ID
       )
       .then(
         (result) => {
