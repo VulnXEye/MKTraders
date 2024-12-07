@@ -1,16 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- Homepage -->
+    <url>
+        <loc>https://mktraders.info/</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
 
-
-<url>
-  <loc>https://mktraders.info/</loc>
-  <lastmod>2024-11-30T12:11:49+00:00</lastmod>
-</url>
-
-
+    <!-- Example Product Pages -->
+    <url>
+        <loc>https://mktraders.info/product/1</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/2</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/3</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/4</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/5</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/6</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/7</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/8</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/9</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/10</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/11</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/12</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/13</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/14</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/15</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/16</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/17</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/18</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/19</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://mktraders.info/product/20</loc>
+        <lastmod>2024-11-30T12:11:49+00:00</lastmod>
+    </url>
 </urlset>
